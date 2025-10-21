@@ -4,6 +4,7 @@ This project applies Natural Language Processing (NLP) and Machine Learning tech
 The app allows users to input any message and instantly get a prediction through a simple, interactive Streamlit web interface.
 
 
+
 **🧠 Features**
 
 📩 Real-time text classification (Spam / Not Spam)
@@ -21,6 +22,7 @@ The app allows users to input any message and instantly get a prediction through
 
 Email_Spam_Classifier/
 │
+
 ├── Email_spam_classifier.ipynb   # Notebook for data analysis and model training  
 ├── app.py                        # Streamlit app for deployment  
 ├── spam_model.pkl                # Saved trained model  
@@ -83,39 +85,42 @@ Libraries:
 
 - Model serialized using pickle
 
--Deployed as an interactive web app with Streamlit
+- Deployed as an interactive web app with Streamlit
 
 **💻 Run Locally**
 
 Clone the Repository
-git clone https://github.com/kshivayadav/Email_Spam_Classifier.git
-cd Email_Spam_Classifier
+- git clone https://github.com/kshivayadav/Email_Spam_Classifier.git
+- cd Email_Spam_Classifier
 
 Install Dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 Run the App
-streamlit run app.py
+
+- streamlit run app.py
 
 Open in Browser
-http://localhost:8501
+
+- http://localhost:8501
 
 
 **📊 Results
 **
-Achieved ~97–98% accuracy on validation data
 
-Reliable spam detection with high recall and precision
+- Achieved ~97–98% accuracy on validation data
+
+- Reliable spam detection with high recall and precision
 
 **🧠 Future Work**
 
-Integrate deep learning models (LSTM / BERT)
+- Integrate deep learning models (LSTM / BERT)
 
-Support multiple languages
+- Support multiple languages
 
-Add an API endpoint for integration with messaging systems
+- Add an API endpoint for integration with messaging systems
 
 **🤝 Contributing**
 
 Contributions are welcome!
-Feel free to fork, improve, and submit a pull request.
+- Feel free to fork, improve, and submit a pull request.
