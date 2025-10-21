@@ -18,6 +18,7 @@ The app allows users to input any message and instantly get a prediction through
 
 
 **📂 Project Structure**
+
 Email_Spam_Classifier/
 │
 ├── Email_spam_classifier.ipynb   # Notebook for data analysis and model training  
@@ -34,55 +35,55 @@ Languages: Python
 
 Libraries:
 
-pandas, numpy, matplotlib, seaborn
+- pandas, numpy, matplotlib, seaborn
 
-scikit-learn
+- scikit-learn
 
-nltk
+- nltk
 
-streamlit
+- streamlit
 
-pickle
+- pickle
 
 **🧩 Model Building Process**
 
 1. Data Preprocessing
 
-Loaded dataset spam.csv
+- Loaded dataset spam.csv
 
-Dropped unnecessary columns and renamed v1 → target, v2 → text
+- Dropped unnecessary columns and renamed v1 → target, v2 → text
 
-Encoded labels (ham → 0, spam → 1)
+- Encoded labels (ham → 0, spam → 1)
 
-Text cleaning pipeline:
+- Text cleaning pipeline:
 
-Convert to lowercase
+- Convert to lowercase
 
-Remove special characters and punctuation
+- Remove special characters and punctuation
 
-Tokenize text
+- Tokenize text
 
-Remove stopwords
+- Remove stopwords
 
-Apply stemming using PorterStemmer
+- Apply stemming using PorterStemmer
 
 2. Feature Extraction
 
-Used TF-IDF Vectorizer to convert text into numerical features
+- Used TF-IDF Vectorizer to convert text into numerical features
 
 3. Model Training
 
-Algorithm used: Multinomial Naïve Bayes
+- Algorithm used: Multinomial Naïve Bayes
 
-Evaluation metrics: Accuracy, Precision, Recall, F1-score
+- Evaluation metrics: Accuracy, Precision, Recall, F1-score
 
-Model achieved high precision and accuracy on test data
+- Model achieved high precision and accuracy on test data
 
 4. Deployment
 
-Model serialized using pickle
+- Model serialized using pickle
 
-Deployed as an interactive web app with Streamlit
+-Deployed as an interactive web app with Streamlit
 
 **💻 Run Locally**
 
