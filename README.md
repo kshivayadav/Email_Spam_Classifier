@@ -1,9 +1,10 @@
-🚀 Project Overview
+**🚀 Project Overview**
 
 This project applies Natural Language Processing (NLP) and Machine Learning techniques to automatically detect spam in text messages or emails.
 The app allows users to input any message and instantly get a prediction through a simple, interactive Streamlit web interface.
 
-🧠 Features
+
+**🧠 Features**
 
 📩 Real-time text classification (Spam / Not Spam)
 
@@ -16,7 +17,7 @@ The app allows users to input any message and instantly get a prediction through
 🌐 Deployed using Streamlit for easy access
 
 
-📂 Project Structure
+**📂 Project Structure**
 Email_Spam_Classifier/
 │
 ├── Email_spam_classifier.ipynb   # Notebook for data analysis and model training  
@@ -27,7 +28,7 @@ Email_Spam_Classifier/
 └── README.md                     # Project documentation  
 
 
-⚙️ Tech Stack
+**⚙️ Tech Stack**
 
 Languages: Python
 
@@ -43,7 +44,8 @@ streamlit
 
 pickle
 
-🧩 Model Building Process
+**🧩 Model Building Process**
+
 1. Data Preprocessing
 
 Loaded dataset spam.csv
@@ -82,7 +84,8 @@ Model serialized using pickle
 
 Deployed as an interactive web app with Streamlit
 
-💻 Run Locally
+**💻 Run Locally**
+
 Clone the Repository
 git clone https://github.com/kshivayadav/Email_Spam_Classifier.git
 cd Email_Spam_Classifier
@@ -97,13 +100,13 @@ Open in Browser
 http://localhost:8501
 
 
-📊 Results
-
+**📊 Results
+**
 Achieved ~97–98% accuracy on validation data
 
 Reliable spam detection with high recall and precision
 
-🧠 Future Work
+**🧠 Future Work**
 
 Integrate deep learning models (LSTM / BERT)
 
@@ -111,7 +114,7 @@ Support multiple languages
 
 Add an API endpoint for integration with messaging systems
 
-🤝 Contributing
+**🤝 Contributing**
 
 Contributions are welcome!
 Feel free to fork, improve, and submit a pull request.
