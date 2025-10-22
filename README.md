@@ -94,6 +94,7 @@ Clone the Repository
 - cd Email_Spam_Classifier
 
 Install Dependencies
+
 - pip install -r requirements.txt
 
 Run the App
@@ -105,8 +106,14 @@ Open in Browser
 - http://localhost:8501
 
 
-**📊 Results
-**
+**🌐 Deployment**
+
+Hosted using Streamlit Cloud
+
+- 🔗 https://huggingface.co/spaces/Shivakumar7781/Email_Classifier
+
+
+**📊 Results**
 
 - Achieved ~97–98% accuracy on validation data
 
