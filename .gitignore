@@ -1,1 +1,87 @@
-venv
+# -------------------------
+# Python basics
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+env.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Logs and local configs
+*.log
+*.env
+*.local
+
+# -------------------------
+# Testing & coverage
+# -------------------------
+htmlcov/
+.tox/
+.nox/
+.coverage*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+.hypothesis/
+
+# -------------------------
+# IDE / editor settings
+# -------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# -------------------------
+# Jupyter notebooks
+# -------------------------
+.ipynb_checkpoints
+
+# -------------------------
+# Type checkers
+# -------------------------
+.mypy_cache/
+.pyre/
+
+# -------------------------
+# ML / AI specific
+# -------------------------
+# Model artifacts
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.ckpt
+*.onnx
+
+# Large datasets
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+
+# Experiment tracking
+mlruns/
+wandb/
+tensorboard/
+*.tfevents.*
+
+# Checkpoints & outputs
+checkpoints/
+outputs/
+results/
