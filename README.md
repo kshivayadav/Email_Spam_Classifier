@@ -108,7 +108,7 @@ Open in Browser
 
 **🌐 Deployment**
 
-Hosted using Streamlit Cloud
+Hosted using HuggingFace
 
 - 🔗 https://huggingface.co/spaces/Shivakumar7781/Email_Classifier
 
