@@ -11,7 +11,9 @@ sms_spam_classifier/
 ├── backend/
 
 │   ├── appp/               # FastAPI application
+
 │   │   ├── main.py         # API entrypoint
+
 │   │   ├── prediction.py   # Prediction logic
 
 │   │   ├── ml_model.py     # ML model loading
@@ -57,64 +59,71 @@ Supports local and production deployment.
 💻 Installation & Run Locally (Without Docker)
 
 Clone the repository:
-
+```
 git clone https://github.com/kshivayadav/Email_Spam_Classifier
 cd sms_spam_classifier
-
+```
 
 Create a virtual environment and activate:
-
+```
 python -m venv .venv
 source .venv/bin/activate       # Linux / Mac
 .venv\Scripts\activate          # Windows
-
+```
 
 Install backend dependencies:
-
+```
 pip install -r backend/requirements.txt
-
+```
 
 Run FastAPI backend:
-
+```
 uvicorn backend.appp.main:app --reload --host 0.0.0.0 --port 8000
-
+```
 
 Run Streamlit frontend:
-
+```
 streamlit run frontend/app.py
-
+```
 
 Open frontend in browser:
-
+```
 http://localhost:8501
-
+```
 
 Open backend Swagger docs:
-
+```
 http://localhost:8000/docs
+```
 
 🐳 Dockerized Run
 
 Build & Run Backend
+```
 docker build -t sms-backend ./backend
 docker run -p 8000:8000 sms-backend
+```
 
 Build & Run Frontend
+```
 docker build -t sms-frontend ./frontend
 docker run -p 8501:8501 sms-frontend
+```
 
 Run Both with Docker Compose
+```
 docker-compose up --build
-
+```
 
 Frontend available at:
-
+```
 http://localhost:8501
-
+```
 
 Backend Swagger docs:
-
+```
 http://localhost:8000/docs
+```
 
 🌐 API Endpoints
 
