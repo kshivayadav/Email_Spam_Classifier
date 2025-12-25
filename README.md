@@ -1,133 +1,139 @@
-**🚀 Project Overview**
+📨 SMS Spam Classifier
 
-This project applies Natural Language Processing (NLP) and Machine Learning techniques to automatically detect spam in text messages or emails.
-The app allows users to input any message and instantly get a prediction through a simple, interactive Streamlit web interface.
+A full-stack, Dockerized SMS Spam Classifier using Machine Learning, FastAPI, and Streamlit.
+Provides a web interface to classify SMS messages as spam or ham, with a REST API backend for predictions.
 
-
-
-**🧠 Features**
-
-📩 Real-time text classification (Spam / Not Spam)
-
-🔍 Text cleaning, tokenization, stopword removal, and stemming
-
-🧮 TF-IDF Vectorization for feature extraction
-
-🤖 Model trained using Multinomial Naïve Bayes
-
-🌐 Deployed using Streamlit for easy access
-
-
-**📂 Project Structure**
-
-Email_Spam_Classifier/
+🛠️ Project Structure
+sms_spam_classifier/
 │
+├── backend/
+│   ├── appp/               # FastAPI application
+│   │   ├── main.py         # API entrypoint
+│   │   ├── prediction.py   # Prediction logic
+│   │   ├── ml_model.py     # ML model loading
+|   |   ├── model.pkl       # Trained ML model
+|   |   ├── vectorizer.pkl  # Vectorizer for text preprocessing
+│   │   └── schema.py       # Pydantic request/response models
+│   ├── Dockerfile          # Backend Dockerfile
+│   └── requirements.txt    # Python dependencies
+│
+├── frontend/
+│   ├── app.py              # Streamlit frontend
+│   ├── Dockerfile          # Frontend Dockerfile
+│   └── requirements.txt    # Python dependencies
+├── docker-compose.yml      # Compose file for full system
+└── README.md
 
-├── Email_spam_classifier.ipynb   # Notebook for data analysis and model training  
-├── app.py                        # Streamlit app for deployment  
-├── spam_model.pkl                # Saved trained model  
-├── vectorizer.pkl                # Saved TF-IDF vectorizer  
-├── requirements.txt              # Dependencies list  
-└── README.md                     # Project documentation  
+⚙️ Features
 
+FastAPI backend serving ML model predictions.
 
-**⚙️ Tech Stack**
+Streamlit frontend UI for interactive SMS classification.
 
-Languages: Python
+Dockerized backend and frontend for reproducible deployment.
 
-Libraries:
+Docker Compose for orchestrating frontend and backend.
 
-- pandas, numpy, matplotlib, seaborn
+Health check endpoint (/health) for backend monitoring.
 
-- scikit-learn
+Supports local and production deployment.
 
-- nltk
+💻 Installation & Run Locally (Without Docker)
 
-- streamlit
+Clone the repository:
 
-- pickle
-
-**🧩 Model Building Process**
-
-1. Data Preprocessing
-
-- Loaded dataset spam.csv
-
-- Dropped unnecessary columns and renamed v1 → target, v2 → text
-
-- Encoded labels (ham → 0, spam → 1)
-
-- Text cleaning pipeline:
-
-- Convert to lowercase
-
-- Remove special characters and punctuation
-
-- Tokenize text
-
-- Remove stopwords
-
-- Apply stemming using PorterStemmer
-
-2. Feature Extraction
-
-- Used TF-IDF Vectorizer to convert text into numerical features
-
-3. Model Training
-
-- Algorithm used: Multinomial Naïve Bayes
-
-- Evaluation metrics: Accuracy, Precision, Recall, F1-score
-
-- Model achieved high precision and accuracy on test data
-
-4. Deployment
-
-- Model serialized using pickle
-
-- Deployed as an interactive web app with Streamlit
-
-**💻 Run Locally**
-
-Clone the Repository
-- git clone https://github.com/kshivayadav/Email_Spam_Classifier.git
-- cd Email_Spam_Classifier
-
-Install Dependencies
-
-- pip install -r requirements.txt
-
-Run the App
-
-- streamlit run app.py
-
-Open in Browser
-
-- http://localhost:8501
+git clone https://github.com/kshivayadav/Email_Spam_Classifier
+cd sms_spam_classifier
 
 
-**🌐 Deployment**
+Create a virtual environment and activate:
 
-Hosted using HuggingFace
+python -m venv .venv
+source .venv/bin/activate       # Linux / Mac
+.venv\Scripts\activate          # Windows
 
-- 🔗 https://huggingface.co/spaces/Shivakumar7781/Email_Classifier
+
+Install backend dependencies:
+
+pip install -r backend/requirements.txt
 
 
-**📊 Results**
+Run FastAPI backend:
 
-- Achieved ~97–98% accuracy on validation data
+uvicorn backend.appp.main:app --reload --host 0.0.0.0 --port 8000
 
-- Reliable spam detection with high recall and precision
 
-**🧠 Future Work**
+Run Streamlit frontend:
 
-- Integrate deep learning models (LSTM / BERT)
+streamlit run frontend/app.py
 
-- Support multiple languages
 
-- Add an API endpoint for integration with messaging systems
+Open frontend in browser:
 
-**🤝 Contributing**
+http://localhost:8501
 
-Contributions are welcome!
-- Feel free to fork, improve, and submit a pull request.
+
+Open backend Swagger docs:
+
+http://localhost:8000/docs
+
+🐳 Dockerized Run
+
+Build & Run Backend
+docker build -t sms-backend ./backend
+docker run -p 8000:8000 sms-backend
+
+Build & Run Frontend
+docker build -t sms-frontend ./frontend
+docker run -p 8501:8501 sms-frontend
+
+Run Both with Docker Compose
+docker-compose up --build
+
+
+Frontend available at:
+
+http://localhost:8501
+
+
+Backend Swagger docs:
+
+http://localhost:8000/docs
+
+🌐 API Endpoints
+
+Endpoint	Method	Description
+/predict	POST	Classify SMS messages (spam/ham)
+/health	GET	Health check for backend service
+
+
+
+🔧 Technologies Used
+
+Python 3.10
+
+FastAPI – REST API backend
+
+Streamlit – Frontend UI
+
+scikit-learn – ML model
+
+NLTK – Text preprocessing
+
+Docker – Containerization
+
+Docker Compose – Multi-service orchestration
+
+🎯 Future Improvements
+
+Add authentication to API endpoints.
+
+Deploy on cloud platforms like AWS, Render, or Railway.
+
+Support batch SMS classification.
+
+Add model retraining pipeline.
+
+📜 License
+
+MIT License © K Shiva Kumar

@@ -6,6 +6,14 @@ from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
 from ml_model import tfidf,model
 
+
+
+try:
+    nltk.download("stopwords")
+except Exception as e:
+    print(f"Warning: Could not download stopwords: {e}")
+
+
 def transform_text(text):
     try:
         text = text.lower()

@@ -12,15 +12,14 @@ st.sidebar.info(
     "This SMS Spam Classifier was built using **NLTK, Scikit-learn, and Streamlit**. "
     "It preprocesses text, vectorizes it, and predicts using a trained ML model."
 )
-
+API_URL = "http://backend:8000/predict"
 input_sms = st.text_area('Enter your message')
 if st.button('predict'):
     if input_sms.strip() == "":
         st.warning("⚠️ Please enter a message before predicting.")
     else:
         try:
-            URL = "http://127.0.0.1:8000/predict"
-            result = requests.post(URL,json = {"message":input_sms},timeout=5)
+            result = requests.post(API_URL,json = {"message":input_sms},timeout=5)
             print(result)
             result.raise_for_status()
             response = result.json()
