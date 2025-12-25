@@ -43,6 +43,31 @@ sms_spam_classifier/
 └── README.md
 
 
+
+
+sms_spam_classifier/
+│
+├── backend/
+│   ├── appp/               # FastAPI application
+│   │   ├── main.py         # API entrypoint
+│   │   ├── prediction.py   # Prediction logic
+│   │   ├── ml_model.py     # ML model loading
+│   │   └── schema.py       # Pydantic request/response models
+│   ├── Dockerfile           # Backend Dockerfile
+│   └── requirements.txt    # Python dependencies
+│
+├── frontend/
+│   ├── app.py               # Streamlit frontend
+│   ├── Dockerfile           # Frontend Dockerfile
+│   └── requirements.txt    # Python dependencies
+│
+├── model.pkl               # Trained ML model
+├── vectorizer.pkl          # Vectorizer for text preprocessing
+├── docker-compose.yml      # Compose file for full system
+└── README.md
+
+
+
 ⚙️ Features
 
 
