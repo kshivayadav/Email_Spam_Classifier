@@ -43,7 +43,7 @@ sms_spam_classifier/
 └── README.md
 
 
-
+```
 
 sms_spam_classifier/
 │
@@ -65,7 +65,7 @@ sms_spam_classifier/
 ├── vectorizer.pkl          # Vectorizer for text preprocessing
 ├── docker-compose.yml      # Compose file for full system
 └── README.md
-
+```
 
 
 ⚙️ Features
