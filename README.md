@@ -18,9 +18,9 @@ sms_spam_classifier/
 
 │   │   ├── ml_model.py     # ML model loading
 
-|   |   ├── model.pkl       # Trained ML model
+|   │   ├── model.pkl       # Trained ML model
 
-|   |   ├── vectorizer.pkl  # Vectorizer for text preprocessing
+|   │   ├── vectorizer.pkl  # Vectorizer for text preprocessing
 
 │   │   └── schema.py       # Pydantic request/response models
 
@@ -42,7 +42,9 @@ sms_spam_classifier/
 
 └── README.md
 
+
 ⚙️ Features
+
 
 FastAPI backend serving ML model predictions.
 
@@ -56,7 +58,9 @@ Health check endpoint (/health) for backend monitoring.
 
 Supports local and production deployment.
 
+
 💻 Installation & Run Locally (Without Docker)
+
 
 Clone the repository:
 ```
@@ -125,11 +129,14 @@ Backend Swagger docs:
 http://localhost:8000/docs
 ```
 
+
 🌐 API Endpoints
+
 
 Endpoint	Method	Description
 /predict	POST	Classify SMS messages (spam/ham)
 /health	GET	Health check for backend service
+
 
 
 
@@ -149,6 +156,7 @@ Docker – Containerization
 
 Docker Compose – Multi-service orchestration
 
+
 🎯 Future Improvements
 
 Add authentication to API endpoints.
@@ -158,6 +166,7 @@ Deploy on cloud platforms like AWS, Render, or Railway.
 Support batch SMS classification.
 
 Add model retraining pipeline.
+
 
 📜 License
 
