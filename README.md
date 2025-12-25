@@ -1,4 +1,4 @@
-###📨 SMS Spam Classifier
+### 📨 SMS Spam Classifier
 
 A full-stack, Dockerized SMS Spam Classifier using Machine Learning, FastAPI, and Streamlit.
 Provides a web interface to classify SMS messages as spam or ham, with a REST API backend for predictions.
@@ -11,9 +11,7 @@ sms_spam_classifier/
 ├── backend/
 
 │   ├── appp/               # FastAPI application
-
 │   │   ├── main.py         # API entrypoint
-
 │   │   ├── prediction.py   # Prediction logic
 
 │   │   ├── ml_model.py     # ML model loading
